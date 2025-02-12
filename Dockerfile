@@ -4,7 +4,7 @@ FROM ghcr.io/linuxserver/unrar:latest AS unrar
 
 FROM ghcr.io/linuxserver/baseimage-alpine:3.21
 
-COPY --from=https://hvj14600.sprint.dynatracelabs.com/linux/oneagent-codemodules-musl:<TECHNOLOGY> / /
+COPY --from=https://hvj14600.sprint.dynatracelabs.com/linux/oneagent-codemodules-musl:all / /
 ENV LD_PRELOAD /opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so
 
 # set version label
